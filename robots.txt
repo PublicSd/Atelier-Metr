@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://publicsd.github.io/Atelier-Metr/sitemap.xml

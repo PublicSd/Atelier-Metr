@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# ЗАМЕНИТЬ: YOUR-DOMAIN.ru на реальный адрес сайта после подключения домена
-Sitemap: https://YOUR-DOMAIN.ru/sitemap.xml
