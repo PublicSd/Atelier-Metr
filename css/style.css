@@ -601,36 +601,31 @@ html.custom-cursor-active textarea{
 .order-confirm-note{ color: var(--wine-soft); font-size:.92rem; }
 .order-confirm-note a{ color: var(--wine); font-weight:700; text-decoration:none; }
 
-/* ================= контакты ================= */
-.contact-grid{ display:grid; gap: 30px; grid-template-columns: 1fr; }
-.contact-name{ margin-bottom:.1em; }
-.contact-caption{ font-family: var(--font-script); font-size:1.3rem; color: var(--wine); margin-top:0; }
-.contact-line{ display:flex; align-items:center; gap:.6em; margin-bottom: .7em; text-decoration:none; color: var(--wine); }
+/* ================= контакты — визитка ================= */
+.contact-stack{ max-width: 520px; margin: 0 auto; }
+.contact-card{ padding: 26px 28px; }
+.bcard-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom: 12px; }
+.contact-name{ margin-bottom:.1em; font-size:1.1rem; }
+.contact-caption{ font-family: var(--font-script); font-size:1.15rem; color: var(--wine); margin:0; }
+.contact-line{ display:flex; align-items:center; gap:.6em; margin-bottom: .5em; text-decoration:none; color: var(--wine); font-size:.94rem; }
 .contact-line .icon{ color: var(--ink); }
-.contact-phone{ font-weight:700; font-size:1.1rem; }
-.contact-map-link{ display:inline-block; color: var(--wine); font-weight:700; text-decoration: underline; margin: 0 0 1em; }
-.contact-map-circle{
-  display:block; width: 220px; height: 220px; margin: 0 0 1.1em;
-  border-radius: 50%; overflow: hidden;
+.contact-phone{ font-weight:700; font-size:1.02rem; }
+.contact-hours-line{ color: var(--wine-soft); }
+.contact-map{
+  flex: none;
+  display:block; width: 200px; height: 200px;
+  border-radius: 10px; overflow: hidden;
   border: 3px solid var(--card-edge);
   box-shadow: 0 6px 16px rgba(23,19,15,.18);
-  transition: transform .2s ease, border-color .2s ease;
 }
-.contact-map-circle:hover{ transform: scale(1.03); border-color: var(--wine); }
-.contact-map-circle iframe{ display:block; width:100%; height:100%; border:0; pointer-events:none; }
-.contact-services{ color: var(--wine-soft); font-size:.95rem; max-width: 46ch; }
+.contact-map iframe{ display:block; width:100%; height:100%; border:0; }
+.contact-services{ color: var(--wine-soft); font-size:.88rem; margin: .2em 0 .8em; }
 .vk-badge{
   display:inline-flex; align-items:center; justify-content:center;
   width: 26px; height:26px; border-radius:50%;
   background: var(--wine); color: var(--card);
   font-size:.68rem; font-weight:700; letter-spacing:.02em;
 }
-.contact-hours{ border-top: 1px dashed var(--card-edge); padding-top: 22px; }
-.contact-hours .icon-lg{ margin-bottom:.3em; }
-.contact-hours dl{ margin-top: 10px; }
-.contact-hours dl div{ display:flex; justify-content:space-between; gap:1em; padding:4px 0; border-bottom:1px dotted var(--card-edge); max-width:220px; }
-.contact-hours dt{ color: var(--wine-soft); }
-.contact-hours dd{ margin:0; font-weight:700; color: var(--wine); }
 
 /* ================= футер ================= */
 .site-footer{ background: var(--card); color: var(--wine-soft); padding: 28px 0; border-top: 1px solid var(--card-edge); }
@@ -654,7 +649,6 @@ html.custom-cursor-active textarea{
 @media (min-width: 700px){
   .hero-grid{ grid-template-columns: 1.15fr .85fr; }
   .feature-grid{ grid-template-columns: repeat(3, 1fr); }
-  .contact-grid{ grid-template-columns: 1.3fr .7fr; }
 }
 
 @media (max-width: 860px){
@@ -671,4 +665,8 @@ html.custom-cursor-active textarea{
   .nav a{ display:block; padding: 12px 0; border-bottom: 1px solid rgba(23,19,15,.1); }
   .nav-toggle{ display:flex; }
   .phone-link span{ display:none; }
+}
+
+@media (max-width: 560px){
+  .bcard-head{ flex-direction: column; align-items:center; text-align:center; }
 }
