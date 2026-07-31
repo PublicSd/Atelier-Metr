@@ -608,9 +608,8 @@ html.custom-cursor-active textarea{
 .contact-line{ display:flex; align-items:center; gap:.6em; margin-bottom: .7em; text-decoration:none; color: var(--wine); }
 .contact-line .icon{ color: var(--ink); }
 .contact-phone{ font-weight:700; font-size:1.1rem; }
-.contact-map-link{ display:inline-block; color: var(--wine); font-weight:700; text-decoration: underline; margin: 0 0 1em; }
 .contact-map-circle{
-  display:block; width: 220px; height: 220px; margin: 0 0 1.1em;
+  display:block; width: 320px; height: 320px; margin: 0 0 1.1em;
   border-radius: 50%; overflow: hidden;
   border: 3px solid var(--card-edge);
   box-shadow: 0 6px 16px rgba(23,19,15,.18);
@@ -626,9 +625,10 @@ html.custom-cursor-active textarea{
   font-size:.68rem; font-weight:700; letter-spacing:.02em;
 }
 .contact-hours{ border-top: 1px dashed var(--card-edge); padding-top: 22px; }
-.contact-hours .icon-lg{ margin-bottom:.3em; }
-.contact-hours dl{ margin-top: 10px; }
-.contact-hours dl div{ display:flex; justify-content:space-between; gap:1em; padding:4px 0; border-bottom:1px dotted var(--card-edge); max-width:220px; }
+.contact-hours .icon-lg{ width: 52px; height: 52px; margin-bottom:.3em; }
+.contact-hours h4{ font-size: 1.4rem; }
+.contact-hours dl{ margin-top: 14px; font-size: 1.15rem; }
+.contact-hours dl div{ display:flex; justify-content:space-between; gap:1em; padding:8px 0; border-bottom:1px dotted var(--card-edge); max-width:280px; }
 .contact-hours dt{ color: var(--wine-soft); }
 .contact-hours dd{ margin:0; font-weight:700; color: var(--wine); }
 
