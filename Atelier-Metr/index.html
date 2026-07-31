@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мэтр — ателье портного в Сосновском | ремонт и пошив одежды</title>
+<meta name="description" content="Ателье «Мэтр»: ремонт и подгонка одежды, пошив по индивидуальным меркам, ремонт швейных машин. Р.п. Сосновское, ул. Матвеева, 31.">
+<meta name="robots" content="index, follow">
+
+<!-- ЗАМЕНИТЬ: адрес после подключения домена к Netlify — сейчас стоит заглушка -->
+<link rel="canonical" href="https://YOUR-DOMAIN.ru/">
+
+<meta property="og:type" content="business.business">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Мэтр — ателье портного в Сосновском">
+<meta property="og:description" content="Ремонт и подгонка одежды, пошив по индивидуальным меркам, ремонт швейных машин. Р.п. Сосновское, ул. Матвеева, 31.">
+<meta property="og:url" content="https://YOUR-DOMAIN.ru/">
+<meta property="og:image" content="https://YOUR-DOMAIN.ru/images/sewing-machine.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ателье «Мэтр»",
+  "image": "https://YOUR-DOMAIN.ru/images/sewing-machine.png",
+  "url": "https://YOUR-DOMAIN.ru/",
+  "telephone": "+7-908-154-84-46",
+  "priceRange": "от 150 ₽",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Матвеева, 31",
+    "addressLocality": "р.п. Сосновское",
+    "addressRegion": "Нижегородская область",
+    "addressCountry": "RU"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ],
+  "sameAs": ["https://vk.ru/burkovs_atelier"]
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%23f0efeb'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%236b1e2f' stroke-width='3'/%3E%3Ccircle cx='16' cy='34' r='6' fill='none' stroke='%236b1e2f' stroke-width='3'/%3E%3Cline x1='21' y1='19' x2='40' y2='38' stroke='%236b1e2f' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='21' y1='31' x2='40' y2='12' stroke='%236b1e2f' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Marck+Script&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stitch-progress" aria-hidden="true" data-stitch-progress>
+  <div class="stitch-progress-track"></div>
+  <div class="stitch-progress-fill" data-stitch-fill></div>
+  <div class="stitch-progress-needle" data-stitch-needle>
+    <svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="3.4"/></svg>
+  </div>
+</div>
+
+<svg class="thread-cursor" aria-hidden="true" data-thread-cursor>
+  <path data-thread-path></path>
+  <circle r="3" data-thread-needle></circle>
+</svg>
+
+<a class="skip-link" href="#main">Перейти к основному содержанию</a>
+
+<!-- ==================== ШАПКА ==================== -->
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <span class="brand-script">Мэтр</span>
+      <span class="brand-caption">ателье портного</span>
+    </a>
+
+    <nav class="nav" id="primary-nav" data-nav>
+      <ul>
+        <li><a href="#about">О мастерской</a></li>
+        <li><a href="#prices">Услуги и цены</a></li>
+        <li><a href="#order">Оформить заказ</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="phone-link" href="tel:+79081548446">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l1.5 4-2 1.6a12.5 12.5 0 0 0 6 6l1.6-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg>
+        <span>8 (908) 154-84-46</span>
+      </a>
+      <a class="vk-link" href="https://vk.ru/burkovs_atelier" target="_blank" rel="noopener" aria-label="Мастерская ВКонтакте">
+        <span class="vk-badge" aria-hidden="true">VK</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Открыть меню</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ==================== ГЕРОЙ ==================== -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+
+      <div class="paper-card hero-card reveal">
+        <p class="eyebrow">Ваш портной</p>
+        <h1>Здесь одежду не выбрасывают — её чинят и шьют заново</h1>
+        <p class="lead">
+          Ателье «Мэтр» в Сосновском: ремонт и подгонка одежды, пошив по
+          индивидуальным меркам, ремонт швейных машин. Аккуратно,
+          руками мастера, без конвейера и лишней спешки.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#order" class="btn btn-primary">Оставить заявку</a>
+          <a href="tel:+79081548446" class="btn btn-ghost btn-call" data-call-btn>
+            <span class="btn-call-face btn-call-label">Позвонить мастеру</span>
+            <span class="btn-call-face btn-call-number">8 (908) 154-84-46</span>
+          </a>
+        </div>
+
+        <ul class="hero-meta">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-11.6A7 7 0 0 1 19 9.4C19 14.7 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.3"/></svg>
+            р.п. Сосновское, ул. Матвеева, 31 (2 этаж)
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.2v5l3.4 2"/></svg>
+            Пн–Пт 8:00–17:00, Сб 8:00–12:00
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-figure reveal" aria-hidden="true">
+        <img src="images/sewing-machine.png" alt="" class="hero-machine" width="389" height="274" loading="eager">
+      </div>
+
+    </div>
+  </section>
+
+  <div class="stitch-divider" aria-hidden="true">
+    <svg viewBox="0 0 800 24" preserveAspectRatio="none"><line x1="0" y1="12" x2="800" y2="12"/></svg>
+  </div>
+
+  <!-- ==================== О МАСТЕРСКОЙ ==================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-script">Немного о деле</p>
+        <h2>О мастерской</h2>
+        <svg class="flourish" viewBox="0 0 120 20" aria-hidden="true">
+          <path d="M4 10 C20 -2, 30 22, 46 10 S72 -2, 88 10 S104 18, 116 10"/>
+          <circle cx="4" cy="10" r="2"/><circle cx="116" cy="10" r="2"/>
+        </svg>
+      </div>
+
+      <div class="paper-card about-card reveal">
+        <p>
+          «Мэтр» — небольшая мастерская полного цикла. Здесь ушивают и чинят одежду,
+          ставят кнопки, люверсы и блочки, шьют шторы и постельное бельё по меркам,
+          а если совсем беда — берутся и за ремонт самих швейных машин.
+          Работа выполняется руками одного мастера — от первой примерки до последнего стежка.
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature">
+            <svg class="icon icon-lg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="10" cy="12" r="5"/><circle cx="10" cy="36" r="5"/><line x1="14" y1="15" x2="42" y2="41"/><line x1="14" y1="33" x2="42" y2="7"/></svg>
+            <h3>Ремонт и подгонка</h3>
+            <p>Молнии, подгибка, работа с трикотажем и мехом — вещи возвращаются в форму.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon icon-lg" viewBox="0 0 48 48" aria-hidden="true"><line x1="14" y1="6" x2="34" y2="42"/><ellipse cx="16.5" cy="10.5" rx="3" ry="4.5" transform="rotate(25 16.5 10.5)"/><path d="M20 12 C30 16, 8 26, 20 34 C30 40, 14 40, 12 34"/></svg>
+            <h3>Пошив по меркам</h3>
+            <p>Брюки, пальто, шторы и постельное бельё — точно по вашим размерам.</p>
+          </div>
+          <div class="feature">
+            <svg class="icon icon-lg" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="15"/><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9.5" y1="9.5" x2="13.8" y2="13.8"/><line x1="34.2" y1="34.2" x2="38.5" y2="38.5"/><line x1="9.5" y1="38.5" x2="13.8" y2="34.2"/><line x1="34.2" y1="13.8" x2="38.5" y2="9.5"/></svg>
+            <h3>Ремонт швейных машин</h3>
+            <p>Если забарахлила ваша машинка — её тоже приведут в порядок.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-divider" aria-hidden="true">
+    <svg viewBox="0 0 800 24" preserveAspectRatio="none"><line x1="0" y1="12" x2="800" y2="12"/></svg>
+  </div>
+
+  <!-- ==================== О МАСТЕРЕ ==================== -->
+  <section class="section" id="master">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-script">Кто шьёт</p>
+        <h2>О мастере</h2>
+        <svg class="flourish" viewBox="0 0 120 20" aria-hidden="true">
+          <path d="M4 10 C20 -2, 30 22, 46 10 S72 -2, 88 10 S104 18, 116 10"/>
+          <circle cx="4" cy="10" r="2"/><circle cx="116" cy="10" r="2"/>
+        </svg>
+      </div>
+
+      <div class="paper-card master-card reveal">
+        <div class="master-layout">
+          <figure class="master-photo-mount">
+            <div class="master-photo-frame">
+              <!-- ЗАМЕНИТЬ: сюда — реальную фотографию мастера (img вместо svg-заглушки) -->
+              <svg class="master-photo-placeholder" viewBox="0 0 200 240" aria-hidden="true">
+                <rect width="200" height="240"/>
+                <circle cx="100" cy="94" r="40"/>
+                <path d="M30 220 C30 160 60 132 100 132 C140 132 170 160 170 220 Z"/>
+              </svg>
+            </div>
+            <span class="master-corner master-corner-tl" aria-hidden="true"></span>
+            <span class="master-corner master-corner-tr" aria-hidden="true"></span>
+            <span class="master-corner master-corner-bl" aria-hidden="true"></span>
+            <span class="master-corner master-corner-br" aria-hidden="true"></span>
+            <figcaption class="master-caption">Олег Бурков, мастер</figcaption>
+          </figure>
+
+          <p class="master-bio">
+            Олег Бурков — портной ателье «Мэтр». Шитьём занимается серьёзно и без спешки: к
+            каждой вещи здесь относятся не как к заказу под номером, а как к работе, которую
+            придётся показывать самому. Сюда несут то, за что не берутся другие: рассказать,
+            что случилось с вещью, и услышать по делу — можно прямо с порога. Здесь совмещают
+            старую школу шитья с готовностью браться за нестандартные просьбы — подогнать,
+            перешить, спасти вещь, которую, казалось, уже никто не возьмётся чинить.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-divider" aria-hidden="true">
+    <svg viewBox="0 0 800 24" preserveAspectRatio="none"><line x1="0" y1="12" x2="800" y2="12"/></svg>
+  </div>
+
+  <!-- ==================== ЦЕНЫ ==================== -->
+  <section class="section" id="prices">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-script">Прайс-лист</p>
+        <h2>Услуги и цены</h2>
+        <svg class="flourish" viewBox="0 0 120 20" aria-hidden="true">
+          <path d="M4 10 C20 -2, 30 22, 46 10 S72 -2, 88 10 S104 18, 116 10"/>
+          <circle cx="4" cy="10" r="2"/><circle cx="116" cy="10" r="2"/>
+        </svg>
+        <p class="section-note">Ниже — стартовые цены. Точная стоимость зависит от ткани и сложности работы и уточняется на месте.</p>
+      </div>
+
+      <div class="paper-card price-card reveal">
+        <div class="price-group">
+          <div class="price-group-title">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="10" cy="12" r="5"/><circle cx="10" cy="36" r="5"/><line x1="14" y1="15" x2="42" y2="41"/><line x1="14" y1="33" x2="42" y2="7"/></svg>
+            <h3>Ремонт и подгонка одежды</h3>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-name">Установка кнопок / люверсов / блочек</span><span class="price-value">от 150 ₽</span></li>
+            <li><span class="price-name">Замена молнии в брюках / джинсах</span><span class="price-value">от 850 ₽</span></li>
+            <li><span class="price-name">Замена молнии в куртке</span><span class="price-value">от 1 200 ₽</span></li>
+            <li><span class="price-name">Подгибка брюк</span><span class="price-value">от 650 ₽</span></li>
+            <li><span class="price-name">Подгибка джинсов с переносом потёртого края</span><span class="price-value">от 850 ₽</span></li>
+            <li><span class="price-name">Подгибка / подрезка трикотажных изделий</span><span class="price-value">от 850 ₽</span></li>
+            <li><span class="price-name">Подгибка пальто</span><span class="price-value">от 2 000 ₽</span></li>
+            <li><span class="price-name">Работа с меховыми изделиями</span><span class="price-value">от 3 000 ₽</span></li>
+          </ul>
+        </div>
+
+        <div class="price-group">
+          <div class="price-group-title">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><line x1="14" y1="6" x2="34" y2="42"/><ellipse cx="16.5" cy="10.5" rx="3" ry="4.5" transform="rotate(25 16.5 10.5)"/><path d="M20 12 C30 16, 8 26, 20 34 C30 40, 14 40, 12 34"/></svg>
+            <h3>Пошив по индивидуальным меркам</h3>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-name">Брюки</span><span class="price-value">от 5 000 ₽</span></li>
+            <li><span class="price-name">Пальто</span><span class="price-value">от 15 000 ₽</span></li>
+            <li><span class="price-name">Шторы</span><span class="price-value">от 200 ₽ / метр строчки</span></li>
+            <li><span class="price-name">Постельное бельё</span><span class="price-value">от 6 000 ₽</span></li>
+          </ul>
+        </div>
+
+        <div class="price-group">
+          <div class="price-group-title">
+            <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="15"/><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="9.5" y1="9.5" x2="13.8" y2="13.8"/><line x1="34.2" y1="34.2" x2="38.5" y2="38.5"/><line x1="9.5" y1="38.5" x2="13.8" y2="34.2"/><line x1="34.2" y1="13.8" x2="38.5" y2="9.5"/></svg>
+            <h3>Ремонт техники</h3>
+          </div>
+          <ul class="price-list">
+            <li><span class="price-name">Ремонт швейных машин</span><span class="price-value">от 2 500 ₽</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="seam-cut" data-seam-cut>
+    <div class="seam-cut-track container" data-seam-track>
+      <div class="seam-reveal" data-seam-reveal>
+        <p>Не уверены, какая услуга нужна? <strong>Бесплатно проконсультируем по телефону</strong> и подскажем стоимость.</p>
+      </div>
+
+      <div class="seam-flap" data-seam-flap aria-hidden="true"></div>
+      <div class="seam-scrap" data-seam-scrap aria-hidden="true"></div>
+
+      <span class="seam-hint" data-seam-hint aria-hidden="true">Потяните ножницы вправо →</span>
+
+      <button type="button" class="seam-scissors" data-seam-handle aria-label="Разрезать шов и открыть предложение о бесплатной консультации">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <g data-blade-a><circle cx="10" cy="12" r="5"/><line x1="14" y1="15" x2="42" y2="24"/></g>
+          <g data-blade-b><circle cx="10" cy="36" r="5"/><line x1="14" y1="33" x2="42" y2="24"/></g>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== ФОРМА ЗАКАЗА ==================== -->
+  <section class="section" id="order">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-script">Заявка на заказ</p>
+        <h2>Расскажите, что нужно сделать</h2>
+        <svg class="flourish" viewBox="0 0 120 20" aria-hidden="true">
+          <path d="M4 10 C20 -2, 30 22, 46 10 S72 -2, 88 10 S104 18, 116 10"/>
+          <circle cx="4" cy="10" r="2"/><circle cx="116" cy="10" r="2"/>
+        </svg>
+        <p class="section-note">Заполните форму — мастер свяжется с вами, чтобы уточнить детали и точную цену.</p>
+      </div>
+
+      <div class="paper-card order-card reveal">
+
+        <form id="order-form" class="order-form" novalidate>
+          <div class="form-row">
+            <label for="of-name">Имя</label>
+            <input type="text" id="of-name" name="name" autocomplete="name" required>
+            <span class="form-error" data-error-for="of-name"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="of-phone">Телефон</label>
+            <input type="tel" id="of-phone" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+            <span class="form-error" data-error-for="of-phone"></span>
+          </div>
+
+          <div class="form-row">
+            <label for="of-service">Услуга</label>
+            <select id="of-service" name="service">
+              <option value="Ремонт и подгонка одежды">Ремонт и подгонка одежды</option>
+              <option value="Пошив по индивидуальным меркам">Пошив по индивидуальным меркам</option>
+              <option value="Ремонт швейной машины">Ремонт швейной машины</option>
+              <option value="Другое">Другое / не уверен(а)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="of-message">Комментарий</label>
+            <textarea id="of-message" name="message" rows="4" placeholder="Какая вещь, из какой ткани, к какому сроку"></textarea>
+          </div>
+
+          <label class="form-consent">
+            <input type="checkbox" id="of-consent" name="consent" required>
+            <span>Соглашаюсь на обработку контактных данных для связи со мной согласно <a href="documents/politika-konfidencialnosti.pdf" target="_blank" rel="noopener">политике конфиденциальности</a></span>
+          </label>
+          <span class="form-error" data-error-for="of-consent"></span>
+
+          <button type="submit" class="btn btn-primary btn-submit">
+            <span class="btn-label">Отправить заявку</span>
+          </button>
+        </form>
+
+        <div class="order-confirm" data-order-confirm hidden>
+          <svg class="stamp" viewBox="0 0 160 160" aria-hidden="true">
+            <g>
+              <circle cx="80" cy="80" r="66" />
+              <circle cx="80" cy="80" r="54" />
+              <text x="80" y="62" text-anchor="middle">ЗАКАЗ</text>
+              <text x="80" y="92" text-anchor="middle">ПРИНЯТ</text>
+              <path id="stamp-underline" d="M40 102 C60 110, 100 110, 120 102" />
+            </g>
+          </svg>
+          <p class="order-confirm-text">Заявка принята! Мастер свяжется с вами в ближайшее рабочее время.</p>
+          <p class="order-confirm-note">Если это срочно — звоните: <a href="tel:+79081548446">8 (908) 154-84-46</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-divider" aria-hidden="true">
+    <svg viewBox="0 0 800 24" preserveAspectRatio="none"><line x1="0" y1="12" x2="800" y2="12"/></svg>
+  </div>
+
+  <!-- ==================== КОНТАКТЫ ==================== -->
+  <section class="section" id="contacts">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow-script">Как нас найти</p>
+        <h2>Контакты</h2>
+        <svg class="flourish" viewBox="0 0 120 20" aria-hidden="true">
+          <path d="M4 10 C20 -2, 30 22, 46 10 S72 -2, 88 10 S104 18, 116 10"/>
+          <circle cx="4" cy="10" r="2"/><circle cx="116" cy="10" r="2"/>
+        </svg>
+      </div>
+
+      <div class="card-stack-wrap">
+        <div class="card-stack-layer card-stack-layer-1" aria-hidden="true"></div>
+        <div class="card-stack-layer card-stack-layer-2" aria-hidden="true"></div>
+        <div class="paper-card contact-card reveal">
+        <div class="contact-grid">
+          <div class="contact-main">
+            <h3 class="contact-name">Бурков Олег Борисович</h3>
+            <p class="contact-caption">Ваш портной</p>
+
+            <a class="contact-line contact-phone" href="tel:+79081548446">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l1.5 4-2 1.6a12.5 12.5 0 0 0 6 6l1.6-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z"/></svg>
+              8 (908) 154-84-46
+            </a>
+
+            <p class="contact-line">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-11.6A7 7 0 0 1 19 9.4C19 14.7 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.3"/></svg>
+              р.п. Сосновское, <strong>ул. Матвеева, 31</strong> (2 этаж)
+            </p>
+
+            <a class="contact-line contact-map-link" href="https://yandex.ru/maps/?text=%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%2C%20%D1%80.%D0%BF.%20%D0%A1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5%2C%20%D1%83%D0%BB.%20%D0%9C%D0%B0%D1%82%D0%B2%D0%B5%D0%B5%D0%B2%D0%B0%2C%2031" target="_blank" rel="noopener">
+              Открыть на карте →
+            </a>
+
+            <p class="contact-services">
+              Ремонт одежды/швейных машин; пошив штор/постельного белья;
+              установка кнопок/люверсов/блочек.
+            </p>
+
+            <a class="contact-line contact-vk" href="https://vk.ru/burkovs_atelier" target="_blank" rel="noopener">
+              <span class="vk-badge" aria-hidden="true">VK</span>
+              Мастерская во ВКонтакте
+            </a>
+          </div>
+
+          <div class="contact-hours">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.2v5l3.4 2"/></svg>
+            <h4>График работы</h4>
+            <dl>
+              <div><dt>Пн–Пт</dt><dd>8:00–17:00</dd></div>
+              <div><dt>Сб</dt><dd>8:00–12:00</dd></div>
+              <div><dt>Вс</dt><dd>выходной</dd></div>
+            </dl>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== ФУТЕР ==================== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="brand-script footer-brand">Мэтр</span>
+    <p>© <span data-year>2026</span> Ателье «Мэтр». Р.п. Сосновское, ул. Матвеева, 31.</p>
+    <a href="tel:+79081548446">8 (908) 154-84-46</a>
+  </div>
+  <div class="container footer-legal">
+    <a href="documents/polzovatelskoe-soglashenie.pdf" target="_blank" rel="noopener">Пользовательское соглашение</a>
+    <a href="documents/politika-konfidencialnosti.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
