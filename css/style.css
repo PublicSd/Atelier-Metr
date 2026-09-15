@@ -467,13 +467,15 @@ html.custom-cursor-active textarea{
 .header-actions{ display:flex; align-items:center; gap:16px; }
 .phone-link{ display:flex; align-items:center; gap:.45em; color: var(--wine); text-decoration:none; font-weight:700; white-space:nowrap; }
 .phone-link .icon{ color: var(--ink); }
+.phone-cta{ display:none; }
 
-.vk-link{ display:flex; transition: transform .18s ease; }
+/* зона нажатия 44×44, сам значок остаётся 26px */
+.vk-link{ display:flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; transition: transform .18s ease; }
 .vk-link:hover{ transform: translateY(-1px); }
 
 .nav-toggle{
   display:none; flex-direction:column; justify-content:center; gap:5px;
-  width:38px; height:34px; background:transparent; border:none; cursor:pointer; padding:0;
+  width:44px; height:44px; background:transparent; border:none; cursor:pointer; padding:0 4px;
 }
 .nav-toggle span{ display:block; height:2px; background: var(--ink); border-radius:2px; }
 
@@ -618,6 +620,7 @@ html.custom-cursor-active textarea{
 .contact-caption{ font-family: var(--font-script); font-size:1.15rem; color: var(--wine); margin:0; }
 .contact-line{ display:flex; align-items:center; gap:.6em; margin-bottom: .5em; text-decoration:none; color: var(--text); font-size:.94rem; }
 .contact-line .icon{ color: var(--ink); }
+a.contact-line{ min-height: 44px; margin-bottom: 0; }
 .contact-phone{ font-weight:700; font-size:1.02rem; color: var(--wine); }
 .contact-hours-line{ color: var(--text-soft); }
 .contact-map{
@@ -641,14 +644,14 @@ html.custom-cursor-active textarea{
 .footer-inner{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; }
 .footer-brand{ font-family: var(--font-script); font-size:1.5rem; color: var(--wine); }
 .footer-inner p{ margin:0; font-size:.85rem; }
-.footer-inner a{ text-decoration:none; color: var(--wine); font-weight:700; }
+.footer-inner a{ display:inline-flex; align-items:center; min-height:44px; text-decoration:none; color: var(--wine); font-weight:700; }
 
 .footer-legal{
-  display:flex; flex-wrap:wrap; gap:6px 18px;
-  margin-top: 14px; padding-top: 14px;
+  display:flex; flex-wrap:wrap; gap:0 18px;
+  margin-top: 14px; padding-top: 4px;
   border-top: 1px solid var(--card-edge);
 }
-.footer-legal a{ font-size:.82rem; color: var(--text-soft); text-decoration: underline; }
+.footer-legal a{ display:inline-flex; align-items:center; min-height:44px; font-size:.82rem; color: var(--text-soft); text-decoration: underline; }
 
 .form-consent a{ color: var(--wine-dark); text-decoration: underline; }
 
@@ -673,7 +676,26 @@ html.custom-cursor-active textarea{
   .nav ul{ flex-direction:column; gap:0; padding: 6px 20px 18px; }
   .nav a{ display:block; padding: 12px 0; border-bottom: 1px solid rgba(23,19,15,.1); }
   .nav-toggle{ display:flex; }
-  .phone-link span{ display:none; }
+
+  /* на телефоне номер в шапке заменяет заметная кнопка звонка */
+  .header-inner{ gap: 8px; }
+  .header-actions{ gap: 4px; }
+  .phone-number{ display:none; }
+  .phone-cta{ display:inline; }
+  .phone-link{
+    min-height: 44px; padding: 0 16px;
+    border-radius: 22px;
+    background: var(--wine); color: var(--card);
+    box-shadow: 0 4px 10px rgba(92,18,36,.25);
+  }
+  .phone-link .icon{ color: currentColor; }
+  .phone-link:active{ background: var(--wine-dark); }
+}
+
+@media (max-width: 359px){
+  .header-inner{ padding-left: 12px; padding-right: 12px; }
+  .phone-link{ padding: 0 14px; }
+  .phone-link .icon{ display:none; }
 }
 
 @media (max-width: 560px){

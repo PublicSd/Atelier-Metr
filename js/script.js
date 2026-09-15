@@ -184,9 +184,14 @@
       seamCut.classList.remove("is-dragging");
     }
 
+    // смещение пальца/мыши меньше этого порога считается нажатием, а не протягиванием
+    const TAP_THRESHOLD = 8;
+    let startX = 0;
+
     function onPointerDown(e) {
       if (completed) return;
       measure();
+      startX = e.clientX;
       dragging = true;
       handle.setPointerCapture(e.pointerId);
       seamCut.classList.add("is-dragging");
@@ -200,12 +205,14 @@
       setPosition(e.clientX - rect.left - HANDLE_SIZE / 2);
     }
 
-    function onPointerUp() {
+    function onPointerUp(e) {
       if (!dragging) return;
       dragging = false;
       handle.style.transition = "";
       flap.style.transition = "";
-      if (cutX >= maxCutX * 0.5) {
+      const isTap =
+        e.type === "pointerup" && Math.abs(e.clientX - startX) < TAP_THRESHOLD;
+      if (isTap || cutX >= maxCutX * 0.5) {
         complete();
       } else {
         cancel();
