@@ -1,18 +1,20 @@
 /* =============================================================
    МЭТР — ателье портного. Стили.
-   Палитра: тёплый почти-белый фон (#f0efeb), текст — бордовый/
-   винный, декоративные детали (иконки, линии, курсор) — чёрные.
+   Палитра: тёплый кремовый фон (#faf6ed), заголовки и акценты —
+   глубокий тёмный бордовый, основной текст — тёмно-коричневый,
+   декоративные детали (иконки, линии, курсор) — чёрные.
    ============================================================= */
 
 :root{
   /* --- цвет --- */
-  --bg:           #f0efeb;   /* фон страницы */
-  --card:         #faf9f6;   /* блоки — чуть светлее/белее фона */
+  --bg:           #faf6ed;   /* фон страницы — тёплый кремовый */
+  --card:         #fffcf6;   /* блоки — чуть светлее фона */
   --card-edge:    #a68d90;   /* границы, пунктир — приглушённый пыльно-винный тон */
   --input:        #ffffff;   /* поля ввода — самые светлые, читаются как "заполняемые" */
-  --wine:         #6b1e2f;   /* основной текст и акцент — бордовый/винный */
-  --wine-dark:    #4a1420;   /* hover/pressed у винных кнопок и ссылок */
-  --wine-soft:    #7d3646;   /* второстепенный текст — тот же винный тон, чуть мягче */
+  --wine:         #5c1224;   /* заголовки и акценты — глубокий тёмный бордовый (12.4:1 на фоне) */
+  --wine-dark:    #3f0b17;   /* hover/pressed у бордовых кнопок и ссылок */
+  --text:         #2b1e17;   /* основной текст — тёмно-коричневый, почти чёрный (15:1) */
+  --text-soft:    #5a4439;   /* второстепенный текст — тот же коричневый, мягче (8.4:1) */
   --ink:          #17130f;   /* "детали": иконки, линии-стежки, рамки, курсор — чёрный */
 
   /* --- типографика --- */
@@ -45,7 +47,7 @@ html{
 body{
   margin: 0;
   font-family: var(--font-body);
-  color: var(--wine);
+  color: var(--text);
   background-color: var(--bg);
   background-image:
     radial-gradient(ellipse 90% 60% at 15% -10%, rgba(255,255,255,0.6), transparent 60%),
@@ -235,7 +237,7 @@ html.custom-cursor-active textarea{
   padding: 0 clamp(18px, 5vw, 40px);
   overflow: hidden;
 }
-.seam-reveal p{ margin:0; color: var(--wine); font-size:.92rem; line-height:1.45; text-align:left; }
+.seam-reveal p{ margin:0; color: var(--text); font-size:.92rem; line-height:1.45; text-align:left; }
 .seam-reveal strong{ color: var(--wine-dark); }
 
 .seam-flap{
@@ -270,7 +272,7 @@ html.custom-cursor-active textarea{
 .seam-hint{
   position:absolute; left: 64px; top: 50%;
   transform: translateY(20px);
-  font-size:.82rem; color: var(--wine-soft); opacity:.85; white-space:nowrap;
+  font-size:.82rem; color: var(--text-soft); opacity:.85; white-space:nowrap;
   transition: opacity .25s ease;
 }
 .seam-cut.is-dragging .seam-hint,
@@ -346,7 +348,7 @@ html.custom-cursor-active textarea{
 .master-photo-placeholder{ width:100%; height:100%; display:block; }
 .master-photo-placeholder rect{ fill: var(--card-edge); opacity:.45; }
 .master-photo-placeholder circle,
-.master-photo-placeholder path{ fill: var(--wine-soft); opacity:.55; }
+.master-photo-placeholder path{ fill: var(--text-soft); opacity:.55; }
 
 .master-caption{
   margin: 10px 0 0;
@@ -365,7 +367,14 @@ html.custom-cursor-active textarea{
 .master-corner-bl{ bottom:0; left:0; clip-path: polygon(0 100%, 100% 100%, 0 0); }
 .master-corner-br{ bottom:0; right:0; clip-path: polygon(100% 100%, 0 100%, 100% 0); }
 
-.master-bio{ color: var(--wine-soft); font-size: 1.03rem; line-height: 1.6; margin:0; }
+.master-bio{ color: var(--text); font-size: 1.03rem; line-height: 1.6; max-width: 62ch; }
+.master-bio p{ margin: 0 0 .8em; }
+.master-bio p:last-child{ margin-bottom: 0; }
+.master-bio-lead{
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 1.3rem; line-height: 1.3;
+  color: var(--wine);
+}
 
 
 .btn{
@@ -445,7 +454,7 @@ html.custom-cursor-active textarea{
 }
 .brand{ display:flex; flex-direction:column; text-decoration:none; color: var(--wine); line-height:1; }
 .brand-script{ font-family: var(--font-script); font-size: 1.8rem; }
-.brand-caption{ font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color: var(--wine-soft); }
+.brand-caption{ font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color: var(--text-soft); }
 
 .nav ul{ display:flex; gap: 28px; }
 .nav a{ text-decoration:none; color: var(--wine); font-size:.95rem; position:relative; padding: 6px 0; }
@@ -476,9 +485,9 @@ html.custom-cursor-active textarea{
   align-items:center;
 }
 .hero-card .eyebrow{ font-family: var(--font-script); font-size:1.6rem; color: var(--wine); margin:0 0 .1em; }
-.hero-card .lead{ color: var(--wine-soft); font-size:1.05rem; max-width:52ch; }
+.hero-card .lead{ color: var(--text-soft); font-size:1.05rem; max-width:52ch; }
 .hero-actions{ display:flex; flex-wrap:wrap; gap:14px; margin: 22px 0 26px; }
-.hero-meta{ display:flex; flex-direction:column; gap:8px; font-size:.92rem; color: var(--wine-soft); }
+.hero-meta{ display:flex; flex-direction:column; gap:8px; font-size:.92rem; color: var(--text-soft); }
 .hero-meta li{ display:flex; align-items:center; gap:.55em; }
 .hero-meta .icon{ color: var(--ink); }
 
@@ -493,16 +502,16 @@ html.custom-cursor-active textarea{
 .section-head{ text-align:center; max-width: 640px; margin: 0 auto 30px; }
 .eyebrow-script{ font-family: var(--font-script); font-size:1.5rem; color: var(--wine); }
 .section-head .flourish{ margin-left:auto; margin-right:auto; }
-.section-note{ color: var(--wine-soft); font-size:.95rem; }
+.section-note{ color: var(--text-soft); font-size:.95rem; }
 
 /* ================= о мастерской ================= */
-.about-card p{ font-size: 1.03rem; color: var(--wine-soft); max-width: 74ch; }
+.about-card p{ font-size: 1.03rem; color: var(--text-soft); max-width: 74ch; }
 .feature-grid{
   display:grid; gap: 26px; margin-top: 18px;
   grid-template-columns: 1fr;
 }
 .feature h3{ margin: .5em 0 .25em; font-size:1.08rem; }
-.feature p{ color: var(--wine-soft); font-size:.95rem; margin:0; }
+.feature p{ color: var(--text-soft); font-size:.95rem; margin:0; }
 
 /* ================= прайс-лист ================= */
 .price-group + .price-group{ margin-top: 30px; padding-top: 26px; border-top: 1px dashed var(--card-edge); }
@@ -545,7 +554,7 @@ html.custom-cursor-active textarea{
 /* ================= форма заказа ================= */
 .order-form{ display:grid; gap: 18px; max-width: 620px; margin: 0 auto; }
 .form-row{ display:flex; flex-direction:column; gap: 6px; min-width: 0; }
-.form-row label{ font-weight:700; font-size:.92rem; color: var(--wine-soft); }
+.form-row label{ font-weight:700; font-size:.92rem; color: var(--text); }
 .form-row input, .form-row select, .form-row textarea{
   width: 100%;
   min-width: 0;
@@ -556,7 +565,7 @@ html.custom-cursor-active textarea{
   border: 1.5px solid var(--card-edge);
   border-radius: var(--radius);
   background: var(--input);
-  color: var(--wine);
+  color: var(--text);
   resize: vertical;
 }
 .form-row input:focus, .form-row select:focus, .form-row textarea:focus{
@@ -574,7 +583,7 @@ html.custom-cursor-active textarea{
 .form-row.has-error input, .form-row.has-error textarea{ border-color: var(--wine-dark); }
 .form-error{ color: var(--wine-dark); font-size: .85rem; min-height: 1.1em; }
 
-.form-consent{ display:flex; align-items:flex-start; gap:.6em; font-size:.92rem; color: var(--wine-soft); max-width:620px; margin: 0 auto; }
+.form-consent{ display:flex; align-items:flex-start; gap:.6em; font-size:.92rem; color: var(--text-soft); max-width:620px; margin: 0 auto; }
 .form-consent input{ margin-top: .3em; accent-color: var(--wine); width: 16px; height: 16px; flex: none; }
 
 .btn-submit{ max-width: 620px; margin: 4px auto 0; width:100%; }
@@ -598,7 +607,7 @@ html.custom-cursor-active textarea{
   100%{ transform: scale(1) rotate(-8deg); opacity:.9; }
 }
 .order-confirm-text{ font-size:1.05rem; font-weight:700; margin-top: 10px; color: var(--wine); }
-.order-confirm-note{ color: var(--wine-soft); font-size:.92rem; }
+.order-confirm-note{ color: var(--text-soft); font-size:.92rem; }
 .order-confirm-note a{ color: var(--wine); font-weight:700; text-decoration:none; }
 
 /* ================= контакты — визитка ================= */
@@ -607,10 +616,10 @@ html.custom-cursor-active textarea{
 .bcard-head{ display:flex; align-items:flex-start; justify-content:space-between; gap:18px; margin-bottom: 12px; }
 .contact-name{ margin-bottom:.1em; font-size:1.1rem; }
 .contact-caption{ font-family: var(--font-script); font-size:1.15rem; color: var(--wine); margin:0; }
-.contact-line{ display:flex; align-items:center; gap:.6em; margin-bottom: .5em; text-decoration:none; color: var(--wine); font-size:.94rem; }
+.contact-line{ display:flex; align-items:center; gap:.6em; margin-bottom: .5em; text-decoration:none; color: var(--text); font-size:.94rem; }
 .contact-line .icon{ color: var(--ink); }
-.contact-phone{ font-weight:700; font-size:1.02rem; }
-.contact-hours-line{ color: var(--wine-soft); }
+.contact-phone{ font-weight:700; font-size:1.02rem; color: var(--wine); }
+.contact-hours-line{ color: var(--text-soft); }
 .contact-map{
   flex: none;
   display:block; width: 200px; height: 200px;
@@ -619,7 +628,7 @@ html.custom-cursor-active textarea{
   box-shadow: 0 6px 16px rgba(23,19,15,.18);
 }
 .contact-map iframe{ display:block; width:100%; height:100%; border:0; }
-.contact-services{ color: var(--wine-soft); font-size:.88rem; margin: .2em 0 .8em; }
+.contact-services{ color: var(--text-soft); font-size:.88rem; margin: .2em 0 .8em; }
 .vk-badge{
   display:inline-flex; align-items:center; justify-content:center;
   width: 26px; height:26px; border-radius:50%;
@@ -628,7 +637,7 @@ html.custom-cursor-active textarea{
 }
 
 /* ================= футер ================= */
-.site-footer{ background: var(--card); color: var(--wine-soft); padding: 28px 0; border-top: 1px solid var(--card-edge); }
+.site-footer{ background: var(--card); color: var(--text-soft); padding: 28px 0; border-top: 1px solid var(--card-edge); }
 .footer-inner{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px; }
 .footer-brand{ font-family: var(--font-script); font-size:1.5rem; color: var(--wine); }
 .footer-inner p{ margin:0; font-size:.85rem; }
@@ -639,7 +648,7 @@ html.custom-cursor-active textarea{
   margin-top: 14px; padding-top: 14px;
   border-top: 1px solid var(--card-edge);
 }
-.footer-legal a{ font-size:.82rem; color: var(--wine-soft); text-decoration: underline; }
+.footer-legal a{ font-size:.82rem; color: var(--text-soft); text-decoration: underline; }
 
 .form-consent a{ color: var(--wine-dark); text-decoration: underline; }
 
